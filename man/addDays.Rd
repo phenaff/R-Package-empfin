@@ -1,0 +1,22 @@
+\name{addDays}
+\alias{addDays}
+\title{add days}
+\usage{
+  addDays(dt, days)
+}
+\arguments{
+  \item{dt}{a Date or timeDate object}
+
+  \item{days}{to be added}
+}
+\value{
+  a Date or timeDate object
+}
+\description{
+  add days to timeDate or Date objects
+}
+\examples{
+d1 <- myDate('23-10-2010')
+d2 <- addDays(d1, 1)
+}
+

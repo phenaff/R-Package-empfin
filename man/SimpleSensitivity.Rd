@@ -1,0 +1,27 @@
+\name{SimpleSensitivity}
+\alias{SimpleSensitivity}
+\title{Bond sensitivity}
+\usage{
+  SimpleSensitivity(coupon, n, yield)
+}
+\arguments{
+  \item{coupon}{(real) coupon rate (.05: 5\%)}
+
+  \item{n}{(integer) number of years to expiry}
+
+  \item{yield}{(real) yield to maturity}
+}
+\value{
+  derivative of price with respect to yield
+}
+\description{
+  Simplified bond sensitivity calculation
+}
+\details{
+  Bond sensitivity with respect to yield, ie. \deqn{ s =
+  -\frac{frac{\partial P}{\partial y}}{P} }
+}
+\examples{
+s <- SimpleSensitivity(.05, 10, .05)
+}
+

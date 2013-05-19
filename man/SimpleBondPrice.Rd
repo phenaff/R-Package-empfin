@@ -1,0 +1,28 @@
+\name{SimpleBondPrice}
+\alias{SimpleBondPrice}
+\title{Bond price}
+\usage{
+  SimpleBondPrice(coupon, n, yield)
+}
+\arguments{
+  \item{coupon}{(real) coupon rate (.05: 5\%)}
+
+  \item{n}{(integer) number of years to expiry}
+
+  \item{yield}{(real) yield to maturity}
+}
+\value{
+  price of $1 nominal
+}
+\description{
+  Simplified bond price calculation
+}
+\details{
+  Price of a bond with annual coupon, computed on coupon
+  payment date \deqn{ P = \sum_{i=1}^n \frac{c}{(1+y)^i} +
+  \frac{1}{(1+r)^n} }
+}
+\examples{
+p <- SimpleBondPrice(.05, 10, .05)
+}
+

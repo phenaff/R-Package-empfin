@@ -1,0 +1,27 @@
+\name{SimpleVariation}
+\alias{SimpleVariation}
+\title{Bond variation}
+\usage{
+  SimpleVariation(coupon, n, yield)
+}
+\arguments{
+  \item{coupon}{(real) coupon rate (.05: 5\%)}
+
+  \item{n}{(integer) number of years to expiry}
+
+  \item{yield}{(real) yield to maturity}
+}
+\value{
+  derivative of price with respect to yield
+}
+\description{
+  Simplified bond variation calculation
+}
+\details{
+  Derivative of bond price with respect to yield \deqn{ v =
+  \frac{\partial P}{\partial y}}
+}
+\examples{
+p <- SimpleVariation(.05, 10, .05)
+}
+

@@ -1,0 +1,41 @@
+\name{Bond}
+\alias{Bond}
+\title{Bond cash flow generator}
+\usage{
+  Bond(id, dtIssue, dtMaturity, couponRate, nominal,
+    frequency)
+}
+\arguments{
+  \item{id}{(string) the identifier of the bond}
+
+  \item{dtIssue}{(date) bond issue date}
+
+  \item{dtMaturity}{(date) bond maturity date}
+
+  \item{couponRate}{(real) coupon rate, in decimal form}
+
+  \item{nominal}{(real) nominal amount}
+
+  \item{frequency}{(string) 'A' for annual, 'S' for
+  semi-annual.}
+}
+\value{
+  a list with the following elements: \describe{
+  \item{id}{the bond identifier} \item{cf}{vector of cash
+  flows} \item{dt}{vector of payment dates for each cash
+  flow} \item{freq}{frequency ("a" or "s")}
+  \item{coupon}{coupon rate} \item{nominal}{nominal amount}
+  }
+}
+\description{
+  Bond Definition
+}
+\details{
+  This function constructs a data structure that describes
+  the cash flow schedule of a bond.
+}
+\examples{
+b374 <- Bond('374', myDate('01/01/2000'),
+             myDate('04/01/2019'), .0375, 100, 'a')
+}
+

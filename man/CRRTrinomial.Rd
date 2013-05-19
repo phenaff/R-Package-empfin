@@ -1,0 +1,45 @@
+\name{CRRTrinomial}
+\alias{CRRTrinomial}
+\title{Trinomial tree model}
+\usage{
+  CRRTrinomial(TypeFlag = c("ce", "pe", "ca", "pa"), S, X,
+    Time, r, b, sigma, n)
+}
+\arguments{
+  \item{TypeFlag}{the option type: \describe{
+  \item{\code{ce}}{European call} \item{\code{pe}}{European
+  put} \item{\code{ca}}{American call}
+  \item{\code{pa}}{American put} }}
+
+  \item{S}{price of underlying asset}
+
+  \item{X}{strike}
+
+  \item{Time}{time to expiry}
+
+  \item{r}{risk-free interest rate}
+
+  \item{b}{cost of carry}
+
+  \item{sigma}{annualized volatility}
+
+  \item{n}{number of steps in tree}
+}
+\value{
+  a data structure with the following elements: \describe{
+  \item{\code{param}}{list of input parameters}
+  \item{\code{price}}{price} \item{\code{delta}}{delta}
+  \item{\code{gamma}}{gamma} }
+}
+\description{
+  Trinomial model
+}
+\details{
+  Trinomial model for pricing European or American vanilla
+  options.
+}
+\examples{
+res <- CRRTrinomial(TypeFlag="ce", S=100, X=100, Time=1, r=.03,
+   b=.03, sigma=.3, n=100)
+}
+

@@ -1,0 +1,30 @@
+\name{SimpleDuration}
+\alias{SimpleDuration}
+\title{Bond duration}
+\usage{
+  SimpleDuration(coupon, n, yield)
+}
+\arguments{
+  \item{coupon}{(real) coupon rate (.05: 5\%)}
+
+  \item{n}{(integer) number of years to expiry}
+
+  \item{yield}{(real) yield to maturity}
+}
+\value{
+  derivative of price with respect to yield
+}
+\description{
+  Simplified bond duration calculation
+}
+\details{
+  Modified duration of a bond price. It is the weighted
+  maturity, where the weights are the present value of the
+  cash flow paid at each date. Let \eqn{F_i} be the cash
+  flow paid at time \eqn{i}. Duration is defined as \deqn{
+  d = \sum_{i=1}^n \frac{F_i (1+y)^{-i}}{P}}
+}
+\examples{
+d <- SimpleDuration(.05, 10, .05)
+}
+
