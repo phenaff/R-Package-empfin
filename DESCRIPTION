@@ -1,26 +1,11 @@
 Package: empfin
 Type: Package
-Title: Utility function for Empirical Finance e-book
+Title: Utility functions and data for Empirical Finance e-book
 Version: 1.0
-Date: 2010-09-22
 Author: P. Henaff
-Maintainer: P. Henaff <henaff.iae@univ-paris1.fr>
-Description: functions and data for the e-book "Topics in Empirical Finance
-    with R and Rmetrics"
+Maintainer: P. Henaff <pa.henaff@gmail.com>
+Description: Utility functions and data for the e-book "Topics in Empirical Finance with R and Rmetrics"
 License: GPL(>=2)
 LazyLoad: yes
-Depends:
-    fOptions,
-    fExoticOptions,
-    fAsianOptions,
-    timeSeries,
-    methods,
-    timeDate,
-    fImport,
-    RCurl,
-    Hmisc
-Collate:
-    'BondUtils.R'
-    'DateUtils.r'
-    'LatexUtils.r'
-    'OptionUtils.R'
+Depends: fOptions, fExoticOptions, fAsianOptions, timeSeries, methods, timeDate, fImport, RCurl, Hmisc
+RoxygenNote: 7.2.3

@@ -11,7 +11,7 @@
 #' \item{\code{ddmmmYYYY}}{ex: 23jun2010}
 #' \item{\code{dd-mm-YYYY}}{ex: 23-12-2010}
 #' \item{\code{dd/mm/YYYY}}{ex: 23/12/2010}
-#' \item{\code{YYYY/mm/dd}}{ex: 2010/12/23}
+#' \item(\code{YYYY/mm/dd}}{ex: 2010/12/23}
 #' \item{\code{dd.mm.YYYY}}{ex: 23.12.2010}
 #' }
 #' @return a Date object
@@ -64,14 +64,10 @@ myDate <- function(dt) {
                       jun=6, jul=7, aug=8, aou=8, sep=9, oct=10, nov=11, dec=12)
 
 # numeric, ends with year
-
-.dt.pattern.1 <- '^([0]?[1-9]|[1|2][0-9]|[3][0|1])[./-]([0]?[1-9]|[1][0-2])[./-]([0-9]{4}|[0-9]{2})$'
-# .dt.pattern.1 <-  '(0?[1-9]|[12][0-9]|3[01])[-/.](0?[1-9]|1[012])[-/.]((19|20)\\d\\d)'
-
+.dt.pattern.1 <-  '(0?[1-9]|[12][0-9]|3[01])[-/.](0?[1-9]|1[012])[-/.]((19|20)\\d\\d)'
 # numeric, starts with year
-.dt.pattern.11 <-  '([0-9]{4})[-/.](0?[1-9]|1[012])[-/.](0?[1-9]|1[0-9]|2[0-9]|3[01])'
+.dt.pattern.11 <-  '((19|20)\\d\\d)[-/.](0?[1-9]|1[012])[-/.](0?[1-9]|1[0-9]|2[0-9]|3[01])'
 
-# month in letters
 .dt.pattern.2 <-  '(0?[1-9]|[12][0-9]|3[01])([A-Z,a-z]{3})((19|20)\\d\\d)'
 
 
